@@ -1,0 +1,60 @@
+.outerDiv{
+    width: 100%;
+    height: 70px;
+    background-color: var(--grey-3);
+}
+
+.innerDiv{
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: var(--fs5);
+    font-weight: var(--fb7);
+    cursor: pointer;
+}
+
+.menuIcon{
+    cursor: pointer;
+    display: none;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.tab{
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.profile{
+    position: relative;
+}
+
+.profile:hover .tabDropdown{
+    position: absolute;
+    top: 25px;
+    display: block;
+}
+
+.tabDropdown{
+    display: none;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--grey-1);   
+    background-color: var(--white-4);
+}
+
+.tabDropdownList{
+    padding: 10px;
+    font-size: var(--fs6);
+}

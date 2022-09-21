@@ -1,0 +1,38 @@
+:root{
+    /* Colors  */
+    --white-1: white;
+    --white-2: #e5e5e5;
+    --white-3: #e8eddf;
+    --white-4: #e7ecef;
+    --crimsion-color: crimson;
+    --grey-1: #22223b;
+    --grey-2: #4a4e69;
+    --grey-3: #274c77;
+    --gold-1: #fca311;
+    --gold-2: #f5cb5c;
+    --black-1: #353535;
+
+    --orange-1: #f87060;
+    --blue-1: #102542;
+    --whitish: #cdd7d6;
+
+
+    /* Border  */
+
+
+    /* Fonts */
+    --fs1: 10rem;
+    --fs2: 8rem;
+    --fs3: 6rem;
+    --fs4: 4rem;
+    --fs5: 2rem;
+    --fs6: 1rem;
+    --fs7: 0.5rem;
+
+    --fb8: 800;
+    --fb7: 700;
+    --fb6: 600;
+    --fb5: 500;
+    --fb4: 400;
+    --fb3: 300; 
+}
