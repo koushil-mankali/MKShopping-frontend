@@ -21,13 +21,15 @@
 
 
     /* Fonts */
-    --fs1: 10rem;
-    --fs2: 8rem;
-    --fs3: 6rem;
+    --fs10: 10rem;
+    --fs8: 8rem;
+    --fs6: 6rem;
     --fs4: 4rem;
-    --fs5: 2rem;
-    --fs6: 1rem;
-    --fs7: 0.5rem;
+    --fs2: 2rem;
+    --fs1: 1rem;
+    --fs05: 0.5rem;
+    --fs015: 1.5rem;
+    --fs025: 2.5rem;
 
     --fb8: 800;
     --fb7: 700;

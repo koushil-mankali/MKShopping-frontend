@@ -1,0 +1,29 @@
+.outerDiv{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.innerDiv{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creditLine{
+    color: var(--whitish);
+}
+
+.creditLine a{
+    font-size: var(--fs015);
+    margin: 0 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.creditLine a:hover{
+    transition: 0.5s;
+    color: var(--crimsion-color);
+}

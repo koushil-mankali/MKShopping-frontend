@@ -15,7 +15,7 @@
 }
 
 .title{
-    font-size: var(--fs5);
+    font-size: var(--fs2);
     font-weight: var(--fb7);
     cursor: pointer;
 }
@@ -30,34 +30,10 @@
     margin:0;
     display: flex;
     list-style: none;
+    font-size: var(--fs1);
 }
 
 .tab{
     margin: 10px;
     cursor: pointer;
-}
-
-
-.profile{
-    position: relative;
-}
-
-.profile:hover .tabDropdown{
-    position: absolute;
-    top: 25px;
-    display: block;
-}
-
-.tabDropdown{
-    display: none;
-    width: max-content;
-    padding: 10px;
-    border-radius: 5px;
-    color: var(--grey-1);   
-    background-color: var(--white-4);
-}
-
-.tabDropdownList{
-    padding: 10px;
-    font-size: var(--fs6);
 }
