@@ -3,13 +3,42 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { Dropdown, Menu, message, Space } from "antd";
+import { DownOutlined, UserOutlined } from "@ant-design/icons";
+
 import css from "./Header.module.css";
 
-import menuIcon from '../../public/Icons/menu.png';
-import crossIcon from '../../public/Icons/close.png';
+import menuIcon from "../../public/Icons/menu.png";
+import crossIcon from "../../public/Icons/close.png";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(true);
+
+  const logoutHandler = () => {
+    message.success("Logged out!");
+  }
+
+  const menu = (
+    <Menu
+      items={[
+        {
+          label: <Link href="/profile">Profile</Link>,
+          key: "1",
+          icon: <UserOutlined />,
+        },
+        {
+          label: <Link href="/profile">Cart</Link>,
+          key: "2",
+          icon: <UserOutlined />,
+        },
+        {
+          label: <div onClick={logoutHandler}>Logout</div>,
+          key: "3",
+          icon: <UserOutlined />,
+        },
+      ]}
+    />
+  );
 
   return (
     <div className={css.outerDiv}>
@@ -43,16 +72,14 @@ const Header = () => {
             <Link href="/cart">Cart</Link>
           </li>
           <li className={[css.tab, css.profile].join(" ")}>
-            Profile
-            <ul className={css.tabDropdown}>
-              <li className={css.tabDropdownList}>
-                <Link href="/profile">My Profile</Link>
-              </li>
-              <li className={css.tabDropdownList}>
-                <Link href="/my-orders">My Orders</Link>
-              </li>
-              <li className={css.tabDropdownList}>Logout</li>
-            </ul>
+            <Dropdown overlay={menu}>
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  Profile
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
           </li>
         </ul>
       </div>

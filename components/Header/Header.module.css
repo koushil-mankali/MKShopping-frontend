@@ -1,6 +1,7 @@
 .outerDiv{
     width: 100%;
     height: 70px;
+    color: var(--white-4);
     background-color: var(--grey-3);
 }
 
@@ -25,6 +26,8 @@
 }
 
 .menu{
+    padding: 0;
+    margin:0;
     display: flex;
     list-style: none;
 }
