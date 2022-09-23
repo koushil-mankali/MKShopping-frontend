@@ -1,15 +1,44 @@
-import css from './ProductCard.module.css'
+import Image from 'next/image'
 
-const ProductCard = () => {
-  return <div className={css.outerDiv}>
-    <div className={css.innerDiv}>
-        <div className={css.imgBox}></div>
-        <div className={css.cardBdy}>
-            <div className={css.cardTtl}></div>
-            <div className={css.btns}></div>
-        </div>
-    </div>
-  </div>
-}
+import css from "./ProductCard.module.css";
 
-export default ProductCard
+import designImg from '../../public/Images/design.webp'
+
+import {
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import { Avatar, Card } from "antd";
+import React from "react";
+const { Meta } = Card;
+
+const ProductCard = () => (
+  <Card
+    style={{
+      width: 300,
+      margin: "1rem",
+    }}
+    cover={
+      <Image
+        alt="example"
+        src={designImg}
+        width ={300}
+        height={250}
+      />
+    }
+    actions={[
+      <SettingOutlined key="setting" />,
+      <EditOutlined key="edit" />,
+      <EllipsisOutlined key="ellipsis" />,
+    ]}
+  >
+    <Meta
+      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+      title="Card title"
+      description="This is the description"
+    />
+  </Card>
+);
+
+export default ProductCard;

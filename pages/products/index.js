@@ -1,4 +1,7 @@
 import AppLayout from "../../components/Layout/Layout";
+import ProductCard from '../../components/ProductCard/ProductCard'
+
+import css from './Products.module.css'
 
 import {
   DesktopOutlined,
@@ -56,7 +59,15 @@ const Products = () => {
             items={items}
           />
         </Sider>
-        <div>Products</div>
+        <div className={css.cardsLayout}>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
       </Layout>
     </AppLayout>
   );
