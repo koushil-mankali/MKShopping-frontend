@@ -1,0 +1,49 @@
+.signupForm{
+    max-width: 400px;
+    margin: var(--fs05) 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--grey-3); 
+    color: var(--whitish);
+}
+
+.ttl{
+    font-size: var(--fs015);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.calcArea{
+    margin: 5px;
+}
+
+.item{
+    margin: 10px 0;
+    font-size: var(--fs1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.br{
+    margin: var(--fs1) 0;
+    border-top: 1px solid var(--grey-2);
+}
+
+.couponArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn, .inpt{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.inpt{
+    color: var(--whitish);
+    background-color: transparent;
+}

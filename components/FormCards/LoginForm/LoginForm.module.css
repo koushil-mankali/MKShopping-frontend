@@ -1,0 +1,32 @@
+.loginForm{
+    max-width: 400px;
+    margin: var(--fs05) 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--grey-3); 
+    color: var(--whitish);
+}
+
+.ttl{
+    font-size: var(--fs015);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.bdy{
+    margin: 5px;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 100%;
+    margin: 10px 0;
+}
