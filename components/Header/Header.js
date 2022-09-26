@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Dropdown, Menu, message, Space } from "antd";
-import { DownOutlined, UserOutlined, ShoppingCartOutlined, HeartOutlined, LogoutOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  UserOutlined,
+  ShoppingCartOutlined,
+  HeartOutlined,
+  LogoutOutlined,
+} from "@ant-design/icons";
 
 import css from "./Header.module.css";
 
@@ -16,7 +22,7 @@ const Header = () => {
 
   const logoutHandler = () => {
     message.success("Logged out!");
-  }
+  };
 
   const menu = (
     <Menu
@@ -53,45 +59,50 @@ const Header = () => {
   return (
     <div className={css.outerDiv}>
       <div className={css.innerDiv}>
-        <Link href="/">
-          <div className={css.title}>MK Shopping</div>
-        </Link>
-        <div
-          className={css.menuIcon}
-          onClick={() => setActiveMenu((val) => !val)}
-        >
-          <Image
-            src={activeMenu ? menuIcon : crossIcon}
-            alt="menu icon"
-            width="32px"
-            height="32px"
-          />
+        <div className={css.leftDiv}>
+          <Link href="/">
+            <div className={css.title}>MK Shopping</div>
+          </Link>
+          <div
+            className={css.menuIcon}
+            onClick={() => setActiveMenu((val) => !val)}
+          >
+            <Image
+              src={activeMenu ? menuIcon : crossIcon}
+              alt="menu icon"
+              width="28px"
+              height="28px"
+              className={css.menuIconImg}
+            />
+          </div>
         </div>
-        <ul className={css.menu}>
-          <li className={css.tab}>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li className={css.tab}>
-            <Link href="/products">
-              <a>Products</a>
-            </Link>
-          </li>
-          <li className={css.tab}>
-            <Link href="/user/cart">Cart</Link>
-          </li>
-          <li className={[css.tab, css.profile].join(" ")}>
-            <Dropdown overlay={menu}>
-              <a onClick={(e) => e.preventDefault()}>
-                <Space>
-                  Profile
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>
-          </li>
-        </ul>
+        <div className={activeMenu ? css.dnone : css.rightDiv}>
+          <ul className={css.menu}>
+            <li className={css.tab}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li className={css.tab}>
+              <Link href="/products">
+                <a>Products</a>
+              </Link>
+            </li>
+            <li className={css.tab}>
+              <Link href="/user/cart">Cart</Link>
+            </li>
+            <li className={[css.tab, css.profile].join(" ")}>
+              <Dropdown overlay={menu}>
+                <a onClick={(e) => e.preventDefault()}>
+                  <Space>
+                    Profile
+                    <DownOutlined />
+                  </Space>
+                </a>
+              </Dropdown>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
