@@ -1,7 +1,7 @@
 import AppLayout from "../../components/Layout/Layout";
-import ProductCard from '../../components/ProductCard/ProductCard'
+import ProductCard from "../../components/ProductCard/ProductCard";
 
-import css from './Products.module.css'
+import css from "./Products.module.css";
 
 import {
   DesktopOutlined,
@@ -43,8 +43,10 @@ const Products = () => {
   return (
     <AppLayout>
       <Layout
+        className={css.biLayout}
         style={{
           minHeight: "100vh",
+          backgroundColor: "transparent",
         }}
       >
         <Sider
@@ -60,6 +62,20 @@ const Products = () => {
           />
         </Sider>
         <div className={css.cardsLayout}>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />

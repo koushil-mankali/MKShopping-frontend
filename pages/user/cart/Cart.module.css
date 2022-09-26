@@ -1,0 +1,38 @@
+.cart{
+    width: 80%;
+    margin: auto;
+}
+
+.cartTtl{
+    font-size: var(--fs2);
+    color: var(--whitish);
+    margin: var(--fs1); 
+}
+
+.bdy{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cartItems{
+    width: 65%;
+}
+
+.checkoutCard{
+    width: 30%;
+}
+
+.tileDiv{
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    display: flex;
+    justify-content: right;
+    border-radius: 5px;
+    border: 1px solid var(--grey-3);
+}
+
+.btn{
+    margin: 10px;
+}

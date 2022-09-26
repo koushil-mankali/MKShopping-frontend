@@ -1,44 +1,81 @@
-import Image from 'next/image'
+import { useState } from "react";
+import Image from "next/image";
 
 import css from "./ProductCard.module.css";
 
-import designImg from '../../public/Images/design.webp'
+import designImg from "../../public/Images/design.webp";
+import {} from "@ant-design/icons";
 
 import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
+  HeartOutlined,
+  HeartFilled,
+  PlusOutlined,
+  ShoppingCartOutlined,
+  CheckOutlined,
 } from "@ant-design/icons";
+
 import { Avatar, Card } from "antd";
 import React from "react";
 const { Meta } = Card;
 
-const ProductCard = () => (
-  <Card
-    style={{
-      width: 300,
-      margin: "1rem",
-    }}
-    cover={
-      <Image
-        alt="example"
-        src={designImg}
-        width ={300}
-        height={250}
+const ProductCard = () => {
+  const [state, setState] = useState({
+    addToCart: false,
+    addToWhishList: false,
+  });
+
+  return (
+    <Card
+      className={css.card}
+      cover={<Image alt="example" src={designImg} width={300} height={250} />}
+      actions={[
+        state.addToCart ? (
+          <CheckOutlined
+            key="addtocart"
+            onClick={() =>
+              setState((prev) => {
+                return { ...prev, addToCart: false };
+              })
+            }
+          />
+        ) : (
+          <PlusOutlined
+            key="addtocart"
+            onClick={() =>
+              setState((prev) => {
+                return { ...prev, addToCart: true };
+              })
+            }
+          />
+        ),
+        state.addToWhishList ? (
+          <HeartFilled
+            key="addtowhishlist"
+            onClick={() =>
+              setState((prev) => {
+                return { ...prev, addToWhishList: false };
+              })
+            }
+          />
+        ) : (
+          <HeartOutlined
+            key="addtowhishlist"
+            onClick={() =>
+              setState((prev) => {
+                return { ...prev, addToWhishList: true };
+              })
+            }
+          />
+        ),
+        <ShoppingCartOutlined key="buynow" />,
+      ]}
+    >
+      <Meta
+        title="Card title"
+        description="This is the description"
       />
-    }
-    actions={[
-      <SettingOutlined key="setting" />,
-      <EditOutlined key="edit" />,
-      <EllipsisOutlined key="ellipsis" />,
-    ]}
-  >
-    <Meta
-      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      title="Card title"
-      description="This is the description"
-    />
-  </Card>
-);
+    </Card>
+  );
+};
 
 export default ProductCard;
